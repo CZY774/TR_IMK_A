@@ -4,18 +4,6 @@ function isDarkMode() {
   return localStorage.getItem('darkMode') === 'true';
 }
 
-// Fungsi untuk mengubah status dark mode dan memperbarui tampilan
-function toggleDarkMode() {
-  const darkModeIcon = document.getElementById('dark-mode-icon');
-  const isDark = isDarkMode();
-
-  // Toggle status dark mode
-  localStorage.setItem('darkMode', !isDark);
-
-  // Panggil fungsi untuk memperbarui tema halaman
-  updateTheme();
-}
-
 // Fungsi untuk memperbarui tema halaman berdasarkan status dark mode
 function updateTheme() {
   const isDark = isDarkMode();
@@ -29,10 +17,22 @@ function updateTheme() {
   darkModeIcon.style.transform = isDark ? 'scaleX(-1)' : 'scaleX(1)';
 }
 
-// Panggil fungsi untuk memperbarui tema saat halaman dimuat
-window.onload = function () {
+// Fungsi untuk mengubah status dark mode dan memperbarui tampilan
+function toggleDarkMode() {
+  const darkModeIcon = document.getElementById('dark-mode-icon');
+  const isDark = isDarkMode();
+
+  // Toggle status dark mode
+  localStorage.setItem('darkMode', !isDark);
+
+  // Panggil fungsi untuk memperbarui tema halaman
   updateTheme();
-};
+}
+
+// Panggil fungsi untuk memperbarui tema saat halaman dimuat
+document.addEventListener('DOMContentLoaded', function() {
+  updateTheme();
+});
 
 // Setelah halaman dimuat, panggil fungsi untuk memeriksa status dark mode
 // dan memperbarui tema secara otomatis
