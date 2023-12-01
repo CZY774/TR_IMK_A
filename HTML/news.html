@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>BEBAS - NEWS</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="/CSS/index.css">
-<script src="/JS/index.js"></script>
-<link rel="stylesheet" href="/CSS/all.css">
-<script src="https://kit.fontawesome.com/ff8466c949.js" crossorigin="anonymous"></script>
+  <title>BEBAS - NEWS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/CSS/index.css">
+  <script src="/JS/index.js"></script>
+  <link rel="stylesheet" href="/CSS/all.css">
+  <script src="https://kit.fontawesome.com/ff8466c949.js" crossorigin="anonymous"></script>
 </head>
 <style>
   html, body, h1, h2, h3, h4, h5, h6 {
     font-family: "Helvetica", sans-serif;
+    scroll-behavior: smooth
   }
   
   .sidebar {
@@ -21,18 +22,18 @@
     bottom: 0;
     height: inherit;
   }
-  </style>
-<body>
+</style>
 
+<body>
 <!-- Navbar -->
 <div class="top">
   <div class="bar theme top left-align large">
-    <a class="bar-item button right hide-large hover-white large theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa-solid fa-bars"></i></a>
+    <a class="bar-item button right hide-large hover-white large theme-l1" href="javascript:void(0)" onclick="openn()"><i class="fa-solid fa-bars"></i></a>
     <a href="/HTML/index.html" class="bar-item button theme-l1" id="logo">B E B A S</a>
-    <a href="#" class="bar-item button hide-small hover-white">FOOTBALL</a>
-    <a href="#" class="bar-item button hide-small hover-white">NBA</a>
-    <a href="#" class="bar-item button hide-small hover-white">BADMINTON</a>
-    <a href="#" class="bar-item button hide-small hover-white">FORMULA 1</a>
+    <a href="/HTML/football.html" class="bar-item button hide-small hover-white">FOOTBALL</a>
+    <a href="/HTML/nba.html" class="bar-item button hide-small hover-white">NBA</a>
+    <a href="/HTML/badminton.html" class="bar-item button hide-small hover-white">BADMINTON</a>
+    <a href="/HTML/formula1.html" class="bar-item button hide-small hover-white">FORMULA 1</a>
     <div class="bar-item button hide-small hide-medium hover-white">
       <i class="fa-solid fa-magnifying-glass"></i>
       <input type="text" placeholder="SEARCH..">
@@ -45,21 +46,20 @@
 
 <!-- Sidebar -->
 <nav class="sidebar bar-block collapse large theme-l5 animate-left" id="mySidebar">
-  <a href="javascript:void(0)" onclick="w3_close()" class="right xlarge padding-large hover-black hide-large" title="Close Menu">
+  <a href="javascript:void(0)" onclick="closee()" class="right xlarge padding-large hover-black hide-large" title="Close Menu">
     <i class="fa fa-remove"></i>
   </a>
   <a class="bar-item button hover-black" href="/HTML/index.html">HOME</a>
-  <a class="bar-item button hover-black" href="#">MERCH</a>
+  <a class="bar-item button hover-black" href="/HTML/Frame Produk.html">MERCH</a>
   <a class="bar-item button hover-black" href="/HTML/news.html">NEWS</a>
   <a class="bar-item button hover-black" href="/HTML/fixtures.html">FIXTURES</a>
-  <a class="bar-item button hover-black" href="#">GALLERY</a>
-  <a class="bar-item button hover-black" href="#">ABOUT US</a>
-  <a class="bar-item button hover-black" href="#">ACCOUNT</a>
-  
+  <a class="bar-item button hover-black" href="/HTML/Gallery.html">GALLERY</a>
+  <a class="bar-item button hover-black" href="#myFooter">ABOUT US</a>
+  <a class="bar-item button hover-black" href="/HTML/login - 1.html">ACCOUNT</a>
 </nav>
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+<div class="overlay hide-large" onclick="closee()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
 <!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
 <div class="main-section" style="margin-left:250px">
@@ -179,7 +179,7 @@
       </div>
       <div class="container theme-l1">
         <h4>Cornelius Yoga - 672022204</h4>
-        <p>YNTKTS | Seorang babu editor yang cuma dibayar dengan revisi, ucapan terima kasih, ngecarry eh ngeluh maksudnya, adalah kewajiban</p>
+        <p>YNTKTS | Hanya seorang manusia biasa</p>
       </div>
       <div class="container theme-l1">
         <h4>Hosea Raka - 672022160</h4>
@@ -195,28 +195,28 @@
 </div>
 
 <script>
-// Get the Sidebar
-var mySidebar = document.getElementById("mySidebar");
+  // Get the Sidebar
+  var mySidebar = document.getElementById("mySidebar");
 
-// Get the DIV with overlay effect
-var overlayBg = document.getElementById("myOverlay");
+  // Get the DIV with overlay effect
+  var overlayBg = document.getElementById("myOverlay");
 
-// Toggle between showing and hiding the sidebar, and add overlay effect
-function w3_open() {
-  if (mySidebar.style.display === 'block') {
-    mySidebar.style.display = 'none';
-    overlayBg.style.display = "none";
-  } else {
-    mySidebar.style.display = 'block';
-    overlayBg.style.display = "block";
+  // Toggle between showing and hiding the sidebar, and add overlay effect
+  function openn() {
+    if (mySidebar.style.display === 'block') {
+      mySidebar.style.display = 'none';
+      overlayBg.style.display = "none";
+    } else {
+      mySidebar.style.display = 'block';
+      overlayBg.style.display = "block";
+    }
   }
-}
 
-// Close the sidebar with the close button
-function w3_close() {
-  mySidebar.style.display = "none";
-  overlayBg.style.display = "none";
-}
+  // Close the sidebar with the close button
+  function closee() {
+    mySidebar.style.display = "none";
+    overlayBg.style.display = "none";
+  }
 </script>
 
 </body>
