@@ -63,7 +63,7 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
 
 /* Body/Header stuff */
 .isi-banget{
-  padding: 30px 2% 0% 10%;
+  padding: 30px 2% 0% 14%;
 }
 
 body {
@@ -104,7 +104,7 @@ label {
   text-align: center;
 }
 .product .product-image img {
-  width: 100px;
+  width: 180px;
 }
 .product .product-details .product-title {
   margin-right: 20px;
@@ -144,7 +144,7 @@ label {
   clear: both;
   width: 79%;
   text-align: right;
-  color: #000;
+  color: #7a7a7a;
 }
 .totals .totals-item .totals-value {
   float: right;
@@ -160,7 +160,7 @@ label {
   border: 0;
   margin-top: 20px;
   padding: 6px 25px;
-  background-color: #6b6;
+  background-color: rgba(0, 0, 0, 0.818);
   color: #fff;
   font-size: 25px;
   border-radius: 3px;
