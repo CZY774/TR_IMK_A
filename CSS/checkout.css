@@ -63,7 +63,17 @@ Side note: I know that this style of nesting in SASS doesn't result in the most 
 
 /* Body/Header stuff */
 .isi-banget{
-  padding: 1% 2% 0% 0%;
+  padding: 30px 2% 0% 10%;
+}
+
+body {
+  padding: 30px 1% 0% 0%;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+}
+
+h1 {
+  font-weight: 100;
 }
 
 label {
@@ -234,18 +244,4 @@ label {
   .totals .totals-item .totals-value {
     width: 40%;
   }
-}
-
-input {
-  background-color: #444;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  width: 173px;
-  height: 17px
-}
-
-input::placeholder {
-  color: #fff;
-  font-size: 12px
 }
